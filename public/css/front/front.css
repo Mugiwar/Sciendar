@@ -1,0 +1,437 @@
+﻿
+#wrapPage {
+	 min-height: calc(100vh - 80px);
+}
+
+#mainHeader {
+	text-align: center;
+	position: relative;
+	
+
+
+}
+
+#mainHeader h1{
+	position: absolute;
+
+
+}
+#navTop{
+	position: absolute;
+	right: 0;
+}
+#navTop ul{
+	
+}
+
+#navTop li{
+	float: left;
+}
+
+
+
+#navTop .sprLogin{
+    width: 50px;
+    height: 50px;
+    background: url(http://www.formget.com/wp-content/uploads/2014/12/Social_circle.png) no-repeat -45px -28px;
+}
+
+#mainHeader img {
+	    width: 100%;
+}
+
+#formSearch {
+	display: none;
+	position: absolute;
+	left:35%;
+	z-index: 2;
+		
+}
+
+#formSearch form {
+	display: inline-block;
+	text-align: left;	
+	background-color: #fef;	
+	
+}
+
+
+#formSearch form fieldset {	
+	border: 1px solid #faf;
+	padding: 20px;
+}
+
+#formSearch form fieldset legend{
+	text-align: left;
+	margin-left: 25px;
+
+}
+
+
+
+
+#formSearch form fieldset div{
+	display: none;
+
+}
+
+#formSearch ul {
+	overflow: hidden;
+}
+
+#formSearch ul > li {
+	float: left;
+}
+
+main {		
+	margin: 0 auto;
+	text-align: center;
+    overflow: hidden;  
+    font-family: Arial;
+    font-size: 14px;
+    line-height: 160%;
+    	
+}
+
+
+main article {
+	display: inline-block;
+	position: relative;
+	height: 225px;
+	width:300px;
+	margin: 5px 5px 5px 0;
+	overflow: hidden;
+}
+main article div {
+	display: flex;
+    position: absolute;
+    background-color: rgba(31, 193, 255, 0.51);
+    width: 100%;
+    z-index: 1;
+}
+
+main article div span{
+	width: 30px;
+    height: 30px;
+    background: url(http://www.formget.com/wp-content/uploads/2014/12/Social_circle.png) no-repeat -45px -28px;
+    display: inline-block;    
+}
+
+main article img {
+	width: 100%;
+	height: 100%;
+	transition: transform 1s cubic-bezier(0.68, 0.33, 0.29, 1.61);
+}
+
+
+
+.confInfo {
+	position: absolute;
+	text-align: justify;
+	top:80%;
+	left: 0px;
+	background-color: rgba(31, 193, 255, 0.51);
+	height: 100%;	  
+}
+
+.confInfo h3 {
+	font-size: 18px;
+	text-align: center;
+}
+
+
+
+#mainFooter {
+	height: 80px;
+	background-color: rgba(31, 193, 255, 0.51);
+	text-align: center;
+	
+}
+
+
+/* Базовые стили слоя затемнения и модального окна  */
+.overlay {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    display: none;
+/* фон затемнения */
+    background-color: rgba(0, 0, 0, 0.65);
+    position: fixed; /* фиксированное поцизионирование */
+    cursor: default; /* тип курсара */
+}
+/* активируем слой затемнения */
+.overlay:target {
+    display: block;
+}
+/* стили модального окна */
+.popup {
+    top: -100%;
+    right: 0;
+    left: 50%;
+    font-size: 14px;
+    z-index: 20;
+    margin: 0;
+    width: 85%;
+    min-width: 320px;
+    max-width: 600px;
+/* фиксированное позиционирование, окно стабильно при прокрутке */
+    position: fixed;
+    padding: 15px;
+    border: 1px solid #383838;
+    background: #fefefe;
+/* скругление углов */
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    border-radius: 4px;
+    font: 14px/18px 'Tahoma', Arial, sans-serif;
+/* внешняя тень */
+    -webkit-box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
+    -moz-box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
+    -ms-box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
+    box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
+    -webkit-transform: translate(-50%, -500%);
+    -ms-transform: translate(-50%, -500%);
+    -o-transform: translate(-50%, -500%);
+    transform: translate(-50%, -500%);
+    -webkit-transition: -webkit-transform 0.6s ease-out;
+    -moz-transition: -moz-transform 0.6s ease-out;
+    -o-transition: -o-transform 0.6s ease-out;
+    transition: transform 0.6s ease-out;
+}
+/* активируем модальный блок */
+.overlay:target+.popup {
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    top: 20%;
+}
+/* формируем кнопку закрытия */
+.close {
+    top: -10px;
+    right: -10px;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    padding: 0;
+    border: 2px solid #ccc;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    border-radius: 15px;
+    background-color: rgba(61, 61, 61, 0.8);
+    -webkit-box-shadow: 0px 0px 10px #000;
+    -moz-box-shadow: 0px 0px 10px #000;
+    box-shadow: 0px 0px 10px #000;
+    text-align: center;
+    text-decoration: none;
+    font: 13px/20px 'Tahoma', Arial, sans-serif;
+    font-weight: bold;
+    -webkit-transition: all ease .8s;
+    -moz-transition: all ease .8s;
+    -ms-transition: all ease .8s;
+    -o-transition: all ease .8s;
+    transition: all ease .8s;
+}
+.close:before {
+    color: rgba(255, 255, 255, 0.9);
+    content: "X";
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.9);
+    font-size: 12px;
+}
+.close:hover {
+    background-color: rgba(252, 20, 0, 0.8);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);    
+}
+/* изображения внутри окна */
+.popup img {
+    width: 100%;
+    height: auto;
+}
+/* миниатюры слева/справа */
+.pic-left, 
+.pic-right {
+    width: 25%;
+    height: auto;
+}
+.pic-left {
+    float: left;
+    margin: 5px 15px 5px 0;
+}
+.pic-right {
+    float: right;
+    margin: 5px 0 5px 15px;
+}
+/* элементы м-медиа, фреймы */
+.popup embed, 
+.popup iframe {
+    top: 0;
+    right: 0;
+    bottom: 0; 
+    left: 0; 
+    display:block;
+    margin: auto;
+    min-width: 320px;
+    max-width: 600px;
+    width: 100%;
+}
+.popup h2 { /* заголовок 2 */
+    margin: 0;
+    color: #008000;
+    padding: 5px 0px 10px;
+    text-align: left;
+    text-shadow: 1px 1px 3px #adadad;
+    font-weight: 500;
+    font-size: 1.4em;
+    font-family: 'Tahoma', Arial, sans-serif;
+    line-height: 1.3;
+}
+/* параграфы */
+.popup p {margin: 0; padding: 5px 0}
+
+
+
+
+}
+.login {
+  position: relative;
+  top: 50%;
+  width: 250px;
+  display: table;
+  margin: -150px auto 0 auto;
+  background: #fff;
+  border-radius: 4px;
+}
+.legend {
+  position: relative;
+  width: 100%;
+  display: block;
+  background: #FF7052;
+  padding: 15px;
+  color: #fff;
+  font-size: 20px;
+}
+.legend:after {
+  content: "";
+  background-image: url(../img/global/icon/multy-user.png);
+  background-size: 100px 100px;
+  background-repeat: no-repeat;
+  background-position: 152px -16px;
+  opacity: 0.06;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+}
+.input {
+  position: relative;
+  width: 70%;
+  margin: 15px auto;
+}
+.input span {
+  position: absolute;
+  display: block;
+  color: #d4d4d4;
+  left: 10px;
+  top: 8px;
+  font-size: 20px;
+}
+.input input {
+  width: 100%;
+  padding: 10px 5px 10px 40px;
+  display: block;
+  border: 1px solid #EDEDED;
+  border-radius: 4px;
+  transition: 0.2s ease-out;
+  color: #a1a1a1;
+}
+.input input:focus {
+  padding: 10px 5px 10px 10px;
+  outline: 0;
+  border-color: #FF7052;
+}
+.submit {
+  width: 45px;
+  height: 45px;
+  display: block;
+  margin: 0 auto -15px auto;
+  background: #fff;
+  border-radius: 100%;
+  border: 1px solid #FF7052;
+  color: #FF7052;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0px 0px 0px 7px #fff;
+  transition: 0.2s ease-out;
+}
+.submit:hover,
+.submit:focus {
+  background: #FF7052;
+  color: #fff;
+  outline: 0;
+}
+.feedback {
+  position: absolute;
+  bottom: -70px;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  background: #2ecc71;
+  padding: 10px 0;
+  font-size: 12px;
+  display: none;
+  opacity: 0;
+}
+.feedback:before {
+  bottom: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: "";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(46, 204, 113, 0);
+  border-bottom-color: #2ecc71;
+  border-width: 10px;
+  margin-left: -10px;
+}
+
+
+
+
+
+
+@media screen and (min-width: 500px) {/* если окно браузера больше максимальной ширины сайта */ 
+  html {
+    margin-left: calc(100vw - 100%);
+    margin-right: 0;
+  }
+}
+
+
+/*@media all and (max-width: 360px) { если окно браузера больше максимальной ширины сайта  
+	main article {width: 350px; height: 50px;}
+}*/
+
+@media all and (max-width: 500px) {
+
+	#navTop .sprLogin{
+   		width: 35px;
+	    height: 35px;
+	    background: url(http://www.formget.com/wp-content/uploads/2014/12/Social_circle.png) no-repeat -24px -48px;	   
+	    background-size: 300px auto;
+	}
+}
+
+
