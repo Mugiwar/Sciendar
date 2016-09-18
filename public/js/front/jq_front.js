@@ -1,4 +1,4 @@
-$().ready(function(){ 
+$().ready(function(){  
 		
 		$('body').on('click','#mainHeader button', function(){
 			if($(this).hasClass('active')){
